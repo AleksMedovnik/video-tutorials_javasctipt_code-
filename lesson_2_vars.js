@@ -31,3 +31,28 @@ let user1 = 'John'
 
 let userName = 'Bob';
 let user_age = 21;
+
+console.log(z); // undefined
+var z = 1;
+console.log(z); // 1
+
+// console.log(e); // Cannot access 'e' before initialization
+let e = 100;
+
+console.log(u); // undefined
+{
+    let t = 1;
+    console.log(t); // 1
+    var u = 10;
+    const o = 10;
+}
+
+// console.log(t); // ReferenceError: t is not defined
+console.log(u); // 10
+// console.log(o); 
+
+for (let i = 0; i < 5; i++) {
+    console.log(i); // 0 - 4
+}
+
+// console.log(i); // ReferenceError: i is not defined
