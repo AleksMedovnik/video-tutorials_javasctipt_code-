@@ -66,7 +66,7 @@ console.log(i) // 0 */
     }
 } */
 
-exit: 
+/* exit: 
 for (let i = 1; i <= 3; i++) {
     for (let j = 1; j <= 3; j++) {
         const data = prompt(`TR: ${i}; TD: ${j}`);
@@ -77,4 +77,18 @@ for (let i = 1; i <= 3; i++) {
     }
 }
 
-alert('Stop!');
+alert('Stop!'); */
+
+/* for (let i = 0; i < 10; i++) {
+    if (i % 2) continue;
+    console.log(i);
+} */
+
+exitMain: for (let i = 2; i <= 100; i++) {
+    for (let j = 2; j < i; j++) {
+        if (i % j == 0) {
+            continue exitMain;
+        }
+    }
+    console.log(i);
+}

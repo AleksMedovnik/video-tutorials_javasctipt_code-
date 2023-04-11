@@ -1,25 +1,18 @@
 'use strict'
 
-// check_target = False
-// for i in range(3):
-//     for j in range(3):
-//         target = int(input(f'TR: {i}; TD: {j}: '))
-//         if target == 10:
-//             check_target = True
-//             print("Цель поражена!")
-//             break 
-//     if check_target:
-//         break
-// else:
-//     print('Ты - лузер!')
-
-exit:
-for (let i = 1; i <= 3; i++){
-    for (let j = 1; j <= 3; j++){
-        let target = +prompt(`TR: ${i}; TD: ${j}`);
-        if (target === 0){
-            alert("Exit");
-            break exit;
-        }
+for (let i = 0; i < 10; i++) {
+    if (i % 2 == 0){
+        console.log(i);
     }
-} 
+}
+
+
+exitMain:
+for (let i = 2; i <= 100; i++) {
+
+    for (let j = 2; j < i; j++) {
+        if (i % j == 0) continue exitMain;
+    }
+
+    console.log(i); 
+}
