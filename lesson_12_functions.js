@@ -2,14 +2,13 @@
 
 let user = 'John'; // global variable
 
+sayHello(); // Hello, Vasya!
+
 function sayHello() {
     let user = 'Vasya'; // local variable
     console.log(`Hello, ${user}!`);
 }
 
-
-sayHello(); // Hello, Vasya!
-sayHello(); // Hello, Vasya!
 console.log(user); // John
 
 
@@ -42,6 +41,8 @@ function checkPassword(validPassword) {
 
 // checkPassword('123abc');
 // checkPassword('456zx');
+
+console.log(sum(10, 20)); // 30
 
 function sum(a, b){
     return a + b;
@@ -76,8 +77,40 @@ function f() {
 let r = f();
 console.log(r); // 
 
+// Cannot access 'multiply' before initialization
+// console.log(multiply(5, 3)); 
 
-let d = double(10);
-console.log(d); // 20
-console.log(double(4)); // 8
-console.log(double(5)); // 10
+const multiply = function(a, b){
+    return a * b;
+}
+console.log(multiply(5, 3)); // 15
+
+const showHello = () => 'Hello!';
+console.log(showHello()); // Hello!
+
+
+const div = (a, b) => a / b;
+console.log(div(10, 5)); // 2
+
+
+checkPassword = validPassword => {
+    for (let i = 0; i < 3; i++) {
+        const userPassword = prompt('Введите пароль', '');
+
+        if (userPassword === null) {
+            alert('Вы отменили ввод данных');
+        } else if (userPassword === '') {
+            alert('Вы ничего не ввели');
+        } else if (userPassword === validPassword) {
+            alert('Вы вошли на сайт!');
+            break;
+        } else {
+            alert('Пароль неверный!');
+        }
+    }
+}
+
+// checkPassword('123abc');
+
+const double = x => x * 2;
+console.log(double(10)); // 20
